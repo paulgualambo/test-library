@@ -1,0 +1,45 @@
+{
+  "name": "@paulgualambo/mi-libreria",
+  "version": "1.0.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },  
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^20.11.30",
+    "semantic-release": "^23.0.5",
+    "typescript": "^5.4.2"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {"path": "build.zip", "label": "Build"},
+            {"path": "coverage.zip", "label": "Coverage"}
+          ]
+        }
+      ]
+    ],
+    "npmPublish": true,
+    "pkgRoot": ".",
+    "tarballDir": "dist"
+  }
+}
