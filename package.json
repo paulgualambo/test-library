@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
-  },  
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -31,8 +31,14 @@
         "@semantic-release/github",
         {
           "assets": [
-            {"path": "build.zip", "label": "Build"},
-            {"path": "coverage.zip", "label": "Coverage"}
+            {
+              "path": "build.zip",
+              "label": "Build"
+            },
+            {
+              "path": "coverage.zip",
+              "label": "Coverage"
+            }
           ]
         }
       ]
