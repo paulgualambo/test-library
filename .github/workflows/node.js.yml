@@ -9,6 +9,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    environment: PROD
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
