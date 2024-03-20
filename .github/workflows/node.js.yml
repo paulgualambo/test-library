@@ -1,3 +1,11 @@
+name: Ejemplo de Flujo de Trabajo
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
 jobs:
   release:
     runs-on: ubuntu-latest
