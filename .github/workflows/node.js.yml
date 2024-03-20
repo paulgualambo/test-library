@@ -14,4 +14,4 @@ jobs:
       - run: npx semantic-release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_PAT }} # Asegúrate de reemplazar GH_PACKAGES_PAT con el nombre de tu secreto
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
